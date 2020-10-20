@@ -1,0 +1,11 @@
+.button.button__white {
+  background: #fff;
+  border: none;
+  color: #1a1b22;
+  transition: all .2s ease-in;
+}
+
+.button__white:hover {
+  opacity: 0.8;
+  box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2)
+}

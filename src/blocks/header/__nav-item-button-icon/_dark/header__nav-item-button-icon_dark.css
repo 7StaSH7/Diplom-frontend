@@ -1,0 +1,10 @@
+.header__nav-item-button-icon.header__nav-item-button-icon_dark {
+  background-image: url('../../../../images/logout-dark.svg');
+}
+
+
+@media screen and (max-width: 767px) {
+  .header__nav-item-button-icon.header__nav-item-button-icon_dark {
+    background-image: url('../../../../images/logout.svg');
+  }
+}

@@ -1,0 +1,26 @@
+@import url('./__loader/search-results__loader.css');
+@import url('./__loader-text/search-results__loader-text.css');
+@import url('./__title/search-results__title.css');
+@import url('./__items/search-results__items.css');
+@import url('./__show-me-more/search-results__show-me-more.css');
+@import url('./__no-results-icon/search-results__no-results-icon.css');
+@import url('./__no-results-title/search-results__no-results-title.css');
+@import url('./__no-results-text/search-results__no-results-text.css');
+
+.search-results {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #f5f6f7;
+}
+
+@media screen and (max-width: 900px) {
+  .search-results {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

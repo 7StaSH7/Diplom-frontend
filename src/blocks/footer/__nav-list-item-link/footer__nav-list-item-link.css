@@ -1,0 +1,11 @@
+.footer__nav-list-item-link {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: all .15s ease-in;
+}
+
+.footer__nav-list-item-link:hover {
+  text-shadow: 3px 2px 2px rgba(79, 201, 231, 0.856);
+  opacity: .8;
+}

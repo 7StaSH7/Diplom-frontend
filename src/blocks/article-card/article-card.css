@@ -1,0 +1,46 @@
+@import url('./__content/article-card__content.css');
+@import url('./__date/article-card__date.css');
+@import url('./__title/article-card__title.css');
+@import url('./__text/article-card__text.css');
+@import url('./__source/article-card__source.css');
+@import url('./__tag/article-card__tag.css');
+@import url('./__trash/article-card__trash.css');
+@import url('./__img/article-card__img.css');
+@import url('./__bookmark/article-card__bookmark.css');
+@import url('./__bookmark-icon/article-card__bookmark-icon.css');
+@import url('./__tip/article-card__tip.css');
+@import url('./__tip-message/article-card__tip-message.css');
+
+.article-card {
+  position: relative;
+  max-width: 100%;
+  height: 576px;
+  border-radius: 16px;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow .25s ease-in;
+}
+
+.article-card:hover {
+  box-shadow: 0 5px 10px rgba(8, 29, 45, 0.1);
+}
+
+@media screen and (max-width: 900px) {
+  .article-card {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .article-card {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .article-card {
+    min-width: 288px;
+    max-width: 340px;
+  }
+}

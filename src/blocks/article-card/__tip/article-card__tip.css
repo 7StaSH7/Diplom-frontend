@@ -1,0 +1,29 @@
+.article-card__tip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 175px;
+  height: 40px;
+  right: 69px;
+  top: 24px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity .15s ease-in;
+}
+
+.article-card__bookmark:hover ~ .article-card__tip {
+  opacity: 1;
+}
+
+.article-card__trash:hover ~ .article-card__tip {
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .article-card__tip {
+    width: 164px;
+  }
+}

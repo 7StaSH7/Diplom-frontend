@@ -1,0 +1,37 @@
+@import url('./__close/popup__close.css');
+@import url('./__content/popup__content.css');
+@import url('./__container/popup__container.css');
+@import url('./__title/popup__title.css');
+@import url('./__form/popup__form.css');
+@import url('./__form-fields/popup__form-fields.css');
+@import url('./__form-field/popup__form-field.css');
+@import url('./__form-input-title/popup__form-input-title.css');
+@import url('./__form-input/popup__form-input.css');
+@import url('./__form-error/popup__form-error.css');
+@import url('./__form-error-from-server/popup__form-error-from-server.css');
+@import url('./__form-button/popup__form-button.css');
+@import url('./__footer/popup__footer.css');
+@import url('./__link/popup__link.css');
+@import url('./__login/popup__login.css');
+@import url('./__registration/popup__registration.css');
+@import url('./__success-registration/popup__success-registration.css');
+
+
+.popup {
+  position: fixed;
+  display: none ;
+  z-index: 99999;
+}
+
+.popup_opened {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
