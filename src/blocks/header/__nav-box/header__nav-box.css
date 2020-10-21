@@ -1,4 +1,5 @@
 @import url('./_dark/header__nav-box_dark.css');
+@import url('./_hidden/header__nav-box_hidden.css');
 
 .header__nav-box {
   width: 100%;

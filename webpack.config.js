@@ -9,11 +9,6 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: {
     main: './src/pages/main/index.js',
-    mainLoggedIn: './src/pages/mainLoggedIn/index.js',
-    searchResults: './src/pages/searchResults/index.js',
-    searchProcess: './src/pages/searchProcess/index.js',
-    searchNoResults: './src/pages/searchNoResults/index.js',
-    searchResultsLoggedIn: './src/pages/searchResultsLoggedIn/index.js',
     savedArticles: './src/pages/savedArticles/index.js',
   },
   output: {
@@ -85,36 +80,6 @@ module.exports = {
       hash: true,
       template: './src/pages/main/index.html',
       filename: './main/index.html',
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/pages/mainLoggedIn/index.html',
-      filename: './mainLoggedIn/index.html',
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/pages/searchResults/index.html',
-      filename: './searchResults/index.html',
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/pages/searchProcess/index.html',
-      filename: './searchProcess/index.html',
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/pages/searchNoResults/index.html',
-      filename: './searchNoResults/index.html',
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/pages/searchResultsLoggedIn/index.html',
-      filename: './searchResultsLoggedIn/index.html',
     }),
     new HtmlWebpackPlugin({
       inject: false,
