@@ -1,12 +1,16 @@
-.search-results__show-me-more {
+.search-results__show-more {
   width: 288px;
   height: 64px;
   margin: 64px auto 0 auto;
   border-radius: 80px;
 }
 
+.search-results__show-more_hidden {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
-  .search-results__show-me-more {
+  .search-results__show-more {
     width: 240px;
     height: 56px;
     margin: 32px auto 0 auto;
@@ -14,7 +18,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .search-results__show-me-more {
+  .search-results__show-more {
     width: 288px;
     height: 56px;
     margin: 16px auto 0 auto;

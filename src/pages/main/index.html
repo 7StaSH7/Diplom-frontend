@@ -16,201 +16,32 @@
 <body>
   <div class="root">
     <header class="header header__main container">
-      <div class="header__nav-box header__nav-box-not-logged-in">
-        <div class="content-container">
-          <h1 class="header__title header__title_light">NewsExplorer</h1>
-          <input class="header__nav-switcher" id="header-nav-switcher" type="checkbox">
-          <label class="header__nav-switcher-label header__nav-switcher-label_open" for="header-nav-switcher"></label>
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item header__nav-item_active">
-                <a class="header__nav-item-link" href="">Главная</a>
-              </li>
-              <li class="header__nav-item">
-                <button class="button button__transparent header__nav-item-button">Авторизоваться</button>
-              </li>
-            </ul>
-            <label class="header__nav-switcher-label header__nav-switcher-label_close"
-              for="header-nav-switcher"></label>
-          </nav>
-        </div>
-      </div>
-      <div class="header__nav-box header__nav-box-logged-in header__nav-box_hidden">
-        <div class="content-container">
-          <h1 class="header__title header__title_light">NewsExplorer</h1>
-          <input class="header__nav-switcher" id="header-nav-switcher" type="checkbox">
-          <label class="header__nav-switcher-label header__nav-switcher-label_open" for="header-nav-switcher"></label>
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item header__nav-item_active">
-                <a class="header__nav-item-link" href="">Главная</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-item-link" href="../savedArticles/index.html">Сохранённые статьи</a>
-              </li>
-              <li class="header__nav-item">
-                <button class="button button__transparent header__nav-item-button">
-                  Александр
-                  <i class="header__nav-item-button-icon"></i>
-                </button>
-              </li>
-            </ul>
-            <label class="header__nav-switcher-label header__nav-switcher-label_close"
-              for="header-nav-switcher"></label>
-          </nav>
-        </div>
-      </div>
+      <div class="header-nav-container"></div>
       <section class="header-search">
         <h2 class="header-search__title">Что в мире творится?</h2>
         <p class="header-search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём&nbsp;личном
           кабинете.</p>
-        <form class="header-search__form">
+        <form class="header-search__form" name="searchForm" novalidate>
           <div class="header-search__form-group">
-            <input class="header-search__input" type="text" name="search" placeholder="Введите тему новости">
-            <button class="button button__blue header-search__button">Искать</button>
+            <input class="header-search__input" type="text" name="search" placeholder="Введите тему новости" required>
+            <p class="popup__form-error popup__form-error_server-error header-search__server-error"></p>
+            <button class="button button__blue header-search__button" disabled>Искать</button>
           </div>
         </form>
       </section>
     </header>
     <main class="main container">
-      <section class="content-container search-results search-results__no-results search-results_hidden">
-        <i class="search-results__no-results-icon"></i>
-        <h3 class="search-results__no-results-title">Ничего не найдено</h3>
-        <p class="search-results__no-results-text">К сожалению по вашему запросу ничего не найдено.</p>
-      </section>
-      <section class="content-container search-results search-results__process search-results_hidden">
-        <i class="preloader search-results__loader"></i>
-        <p class="search-results__loader-text">Идет поиск новостей...</p>
-      </section>
-      <section class="content-container search-results search-results__not-logged-in search-results_hidden">
-        <h2 class="section-title search-results__title">Результаты поиска</h2>
-        <div class="search-results__items">
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_05.jpg').default %>"
-              alt="Национальное достояние – парки" />
-            <span class="article-card__tag">Природа</span>
-            <div class="article-card__bookmark">
-              <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked"></div>
-            </div>
-            <div class="article-card__tip">
-              <p class="article-card__tip-message">Войдите, чтобы сохранять статьи</p>
-            </div>
 
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Национальное достояние – парки</h3>
-              <p class="article-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_06.jpg').default %>"
-              alt="Лесные огоньки: история одной фотографии" />
-            <span class="article-card__tag">Тайга</span>
-            <div class="article-card__bookmark">
-              <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked"></div>
-            </div>
-            <div class="article-card__tip">
-              <p class="article-card__tip-message">Войдите, чтобы сохранять статьи</p>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-              <p class="article-card__text">
-                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую
-                красоту одного из местных чудес природы.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_01.jpg').default %>"
-              alt="Лесные огоньки: история одной фотографии" />
-            <span class="article-card__tag">Природа</span>
-            <div class="article-card__bookmark">
-              <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked"></div>
-            </div>
-            <div class="article-card__tip">
-              <p class="article-card__tip-message">Войдите, чтобы сохранять статьи</p>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-              <p class="article-card__text">
-                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую
-                красоту одного из местных чудес природы.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-        </div>
-        <button class="button button__white search-results__show-me-more">Показать еще</button>
+      <section class="content-container search-results news-cards-list search-results_hidden">
+
       </section>
-      <section class="content-container search-results search-results__logged-in search-results_hidden">
-        <h2 class="section-title search-results__title">Результаты поиска</h2>
-        <div class="search-results__items">
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_05.jpg').default %>"
-              alt="Национальное достояние – парки" />
-            <span class="article-card__tag">Природа</span>
-            <div class="article-card__bookmark">
-              <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked"></div>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Национальное достояние – парки</h3>
-              <p class="article-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_06.jpg').default %>"
-              alt="Лесные огоньки: история одной фотографии" />
-            <span class="article-card__tag">Тайга</span>
-            <div class="article-card__bookmark">
-              <div class="article-card__bookmark-icon article-card__bookmark-icon_marked"></div>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-              <p class="article-card__text">
-                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую
-                красоту одного из местных чудес природы.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_01.jpg').default %>"
-              alt="Лесные огоньки: история одной фотографии" />
-            <span class="article-card__tag">Природа</span>
-            <div class="article-card__bookmark">
-              <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked"></div>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Лесные огоньки: история одной фотографии</h3>
-              <p class="article-card__text">
-                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую
-                красоту одного из местных чудес природы.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-        </div>
-        <button class="button button__white search-results__show-me-more">Показать еще</button>
-      </section>
+
       <section class="content-container about">
         <div class="about__img-container">
           <picture>
             <source media="(max-width: 900px)" srcset="../<%= require('@images/ava.jpg').default %>" />
             <img class="about__avatar" src="../<%= require('@images/ava.jpg').default %>" alt="Автор">
+            <!-- <img class="about__avatar" src="../../images/ava.jpg" alt="Автор"> -->
           </picture>
         </div>
         <div class="about__info">
@@ -248,83 +79,210 @@
         <li class="footer__social-item">
           <a href="https://github.com/7StaSH7" class="footer__social-item-link" target="_blank">
             <img src="../<%= require('@images/github.svg').default %>" class="footer__social-icon" alt="GitHub">
+            <!-- <img src="../../images/github.svg" class="footer__social-icon" alt="GitHub"> -->
           </a>
         </li>
         <li class="footer__social-item">
           <a href="https://vk.com/7stash7" class="footer__social-item-link" target="_blank">
             <img src="../<%= require('@images/fb.svg').default %>" class="footer__social-icon" alt="Facebook">
+            <!-- <img src="../../images/fb.svg" class="footer__social-icon" alt="Facebook"> -->
           </a>
         </li>
       </ul>
     </footer>
 
-    <div class="popup popup__popup-login">
-      <div class="popup__content popup__login">
+    <div class="popup">
+      <div class="popup__container">
         <span class="popup__close"></span>
+        <div class="popup__content"></div>
+      </div>
+    </div>
+
+    <template id="popup-login">
+      <div class="popup__login">
         <h3 class="popup__title">Вход</h3>
-        <form class="popup__form">
+        <form class="popup__form" name="popupForm">
           <fieldset class="popup__form-fields">
             <div class="popup__form-field">
               <h6 class="popup__form-input-title">Email</h6>
-              <input type="email" class="popup__form-input" pattern="[0-9a-zA-Z_-]+[@][0-9a-zA-Z_-]+[.][0-9a-zA-Z]+"
-                placeholder="Введите email" required>
+              <input type="email" name="email" class="popup__form-input popup__form-input_email"
+                pattern="[0-9a-zA-Z_-]+[@][0-9a-zA-Z_-]+[.][0-9a-zA-Z]+" placeholder="Введите email" required>
               <p class="popup__form-error">Неправильный формат email</p>
             </div>
             <div class="popup__form-field">
               <h6 class="popup__form-input-title">Пароль</h6>
-              <input type="password" class="popup__form-input" minlength="8" placeholder="Введите пароль" required>
+              <input type="password" name="password" class="popup__form-input popup__form-input_password" minlength="8"
+                placeholder="Введите пароль" required>
               <p class="popup__form-error">Минимум 8 символов</p>
             </div>
           </fieldset>
-          <p class="popup__form-error popup__form-error-from-server">Неправильное имя пользователя или пароль</p>
+          <p class="popup__form-error popup__form-error_server-error">Неправильное имя пользователя или пароль</p>
           <button class="button button__blue popup__form-button">Войти</button>
         </form>
         <div class="popup__footer">или <span class="popup__link">Зарегистрироваться</span></div>
       </div>
-    </div>
+    </template>
 
-    <div class="popup popup__popup-registration">
-      <div class="popup__content popup__registration">
-        <span class="popup__close"></span>
+    <template id="popup-registration">
+      <div class="popup__registration">
         <h3 class="popup__title">Регистрация</h3>
         <form class="popup__form">
           <fieldset class="popup__form-fields">
             <div class="popup__form-field">
               <h6 class="popup__form-input-title">Email</h6>
-              <input type="email" class="popup__form-input" pattern="[0-9a-zA-Z_-]+[@][0-9a-zA-Z_-]+[.][0-9a-zA-Z]+"
-                placeholder="Введите email" required>
+              <input type="email" name="email" class="popup__form-input popup__form-input_email"
+                pattern="[0-9a-zA-Z_-]+[@][0-9a-zA-Z_-]+[.][0-9a-zA-Z]+" placeholder="Введите email" required>
               <p class="popup__form-error">Неправильный формат email</p>
             </div>
             <div class="popup__form-field">
               <h6 class="popup__form-input-title">Пароль</h6>
-              <input type="password" class="popup__form-input" minlength="8" placeholder="Введите пароль" required>
+              <input type="password" name="password" class="popup__form-input popup__form-input_password" minlength="8"
+                placeholder="Введите пароль" required>
               <p class="popup__form-error">Минимум 8 символов</p>
             </div>
             <div class="popup__form-field">
               <h6 class="popup__form-input-title">Имя</h6>
-              <input type="text" class="popup__form-input" pattern="^[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)?$"
-                placeholder="Ваше имя" required>
+              <input type="text" name="name" class="popup__form-input popup__form-input_name"
+                pattern="^[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)?$" placeholder="Ваше имя" required>
               <p class="popup__form-error">Должно начинаться с заглавной буквы, от 2 до 20 символов, только
                 кириллица</p>
             </div>
           </fieldset>
-          <p class="popup__form-error popup__form-error-from-server">Такой пользователь уже есть</p>
-          <button class="button button__blue popup__form-button">Зарегистрироваться</button>
+          <p class="popup__form-error popup__form-error_server-error">Такой пользователь уже есть!</p>
+          <button class="button button__blue popup__form-button" type="submit" disabled>Зарегистрироваться</button>
         </form>
         <div class="popup__footer">или <span class="popup__link">Войти</span></div>
       </div>
-    </div>
+    </template>
 
-    <div class="popup popup__popup-success-registration">
-      <div class="popup__content popup__success-registration">
-        <span class="popup__close"></span>
+    <template id="popup-successful-registration">
+      <div class="popup__successful-registration">
         <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-        <div class="popup__footer"><span class="popup__link popup__link_success-registration">Войти</span>
+        <div class="popup__footer"><span class="popup__link popup__link_successful-registration">Войти</span>
         </div>
       </div>
-    </div>
+    </template>
+
+    <template id="header-nav-not-logged-in">
+      <div class="header__nav-box">
+        <div class="content-container">
+          <h1 class="header__title header__title_light">NewsExplorer</h1>
+          <input class="header__nav-switcher" id="header-nav-switcher" type="checkbox">
+          <label class="header__nav-switcher-label header__nav-switcher-label_open" for="header-nav-switcher"></label>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item header__nav-item_active">
+                <a class="header__nav-item-link" href="">Главная</a>
+              </li>
+              <li class="header__nav-item">
+                <button class="button button__transparent header__nav-item-button">Авторизоваться</button>
+              </li>
+            </ul>
+            <label class="header__nav-switcher-label header__nav-switcher-label_close"
+              for="header-nav-switcher"></label>
+          </nav>
+        </div>
+      </div>
+    </template>
+
+    <template id="header-nav-logged-in">
+      <div class="header__nav-box">
+        <div class="content-container">
+          <h1 class="header__title header__title_light">NewsExplorer</h1>
+          <input class="header__nav-switcher" id="header-nav-switcher" type="checkbox">
+          <label class="header__nav-switcher-label header__nav-switcher-label_open" for="header-nav-switcher"></label>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item header__nav-item_active">
+                <a class="header__nav-item-link" href="">Главная</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item-link" href="../savedArticles/index.html">Сохранённые статьи</a>
+              </li>
+              <li class="header__nav-item">
+                <button class="button button__transparent header__nav-item-button">
+                  <span class="header__nav-item-name"></span>
+                  <i class="header__nav-item-button-icon"></i>
+                </button>
+              </li>
+            </ul>
+            <label class="header__nav-switcher-label header__nav-switcher-label_close"
+              for="header-nav-switcher"></label>
+          </nav>
+        </div>
+      </div>
+    </template>
+
+    <template id="search-no-results">
+      <i class="search-results__no-results-icon"></i>
+      <h3 class="search-results__no-results-title">Ничего не найдено</h3>
+      <p class="search-results__no-results-text">К сожалению по вашему запросу ничего не найдено.</p>
+    </template>
+
+    <template id="search-results-process">
+      <i class="preloader search-results__loader"></i>
+      <p class="search-results__loader-text">Идет поиск новостей...</p>
+    </template>
+
+    <template id="search-results">
+      <h2 class="section-title search-results__title">Результаты поиска</h2>
+      <div class="search-results__items"></div>
+      <button class="button button__white search-results__show-more">Показать еще</button>
+    </template>
+
+    <template id="search-error">
+      <i class="search-results__no-results-icon"></i>
+      <h3 class="search-results__no-results-title">Ой</h3>
+      <p class="search-results__no-results-text">Что-то не так с севером! Попробуйте позже...</p>
+    </template>
+
+    <template id="article-card">
+      <article class="article-card">
+        <img class="article-card__img" src="" alt="" />
+        <div class="article-card__icon-container"></div>
+        <div class="article-card__content">
+          <h5 class="article-card__date"></h5>
+          <h3 class="article-card__title"></h3>
+          <p class="article-card__text"></p>
+        </div>
+        <h4 class="article-card__source"></h4>
+      </article>
+    </template>
+
+    <template id="article-card-base-action">
+      <a href="" target="_blank" class="article-card__link"></a>
+      <div class="article-card__bookmark">
+        <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked article-card__action"></div>
+      </div>
+      <div class="article-card__tip">
+        <p class="article-card__tip-message">Войдите, чтобы сохранять статьи</p>
+      </div>
+    </template>
+
+    <template id="article-card-like-action">
+      <a href="" target="_blank" class="article-card__link"></a>
+      <div class="article-card__bookmark">
+        <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked article-card__action"></div>
+      </div>
+    </template>
+
+    <template id="article-card-unlike-action">
+      <a href="" target="_blank" class="article-card__link"></a>
+      <div class="article-card__bookmark">
+        <div class="article-card__bookmark-icon article-card__bookmark-icon_marked article-card__action"></div>
+      </div>
+    </template>
+
+    <template id="article-card-saved-action">
+      <a href="" target="_blank" class="article-card__link"></a>
+      <span class="article-card__tag">Природа</span>
+      <span class="article-card__trash article-card__action"></span>
+    </template>
+
   </div>
 
+
+  <!-- <script type="module" src="./index.js"></script> -->
   <script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 
