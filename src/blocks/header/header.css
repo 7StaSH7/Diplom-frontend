@@ -1,0 +1,17 @@
+@import url('./__main/header__main.css');
+@import url('./__saved/header__saved.css');
+@import url('./__nav-box/header__nav-box.css');
+@import url('./__title/header__title.css');
+@import url('./__nav/header__nav.css');
+@import url('./__nav-list/header__nav-list.css');
+@import url('./__nav-switcher/header__nav-switcher.css');
+@import url('./__nav-switcher-label/header__nav-switcher-label.css');
+@import url('./__nav-item/header__nav-item.css');
+@import url('./__nav-item-link/header__nav-item-link.css');
+@import url('./__nav-item-button/header__nav-item-button.css');
+@import url('./__nav-item-button-icon/header__nav-item-button-icon.css');
+
+.header {
+  width: 100%;
+  background-color: #fff;
+}

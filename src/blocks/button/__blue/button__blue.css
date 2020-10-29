@@ -1,0 +1,10 @@
+.button__blue {
+  background: #2f71e5;
+  box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
+  border: none;
+  color: #fff;
+}
+
+.button__blue:hover {
+  background: #699bf3;
+}

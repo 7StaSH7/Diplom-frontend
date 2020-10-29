@@ -1,0 +1,15 @@
+@import url('./_dark/header__nav-switcher-label_dark.css');
+@import url('./_open/header__nav-switcher-label_open.css');
+@import url('./_close/header__nav-switcher-label_close.css');
+
+.header__nav-switcher-label {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav-switcher-label {
+    display: block;
+  }
+}

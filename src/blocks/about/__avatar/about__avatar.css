@@ -1,0 +1,19 @@
+.about__avatar {
+  display: block;
+  box-shadow: 0 0px 10px rgba(14, 26, 57, 0.2);
+  border-radius: 50%;
+  width: 464px;
+  height: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .about__avatar {
+    width: 232px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .about__avatar {
+    width: 272px;
+  }
+}

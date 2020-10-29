@@ -1,0 +1,7 @@
+.article-card__bookmark-icon.article-card__bookmark-icon_marked {
+  background: #fff url('../../../../images/bookmark-marked.svg') center center no-repeat;
+}
+
+.article-card__bookmark-icon.article-card__bookmark-icon_marked:hover {
+  background-image: url('../../../../images/bookmark-marked.svg');
+}
