@@ -2,3 +2,13 @@
 .header__nav-item.header__nav-item_active {
   color: #fff;
 }
+
+.header__nav-item_dark.header__nav-item_active {
+  color: #1a1b22;
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav-item_active.header__nav-item_dark {
+    color: #fff;
+  }
+}

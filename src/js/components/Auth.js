@@ -28,8 +28,7 @@ export default class Auth {
   }
 
   isSavedPage() {
-    return window.location.pathname === '/dist/savedArticles/index.html' || window.location.pathname === '/savedArtcles'
-      || window.location.pathname === '/';
+    return window.location.pathname === '/savedArticles/index.html' || window.location.pathname === '/' || window.location.pathname === '/dist/savedArticles/index.html';
   }
 
   getUserName() {
