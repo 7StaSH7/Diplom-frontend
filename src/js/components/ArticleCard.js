@@ -98,9 +98,11 @@ export default class ArticleCard extends BaseComponent {
     this._keyword = keyword;
 
     this._container = template.cloneNode(true).content;
+
     const cardImageElement = this._container.querySelector('.article-card__img');
     cardImageElement.src = image;
     cardImageElement.alt = title;
+
     this._container.querySelector('.article-card__date').textContent = this._getCardDate(date);
     this._container.querySelector('.article-card__title').textContent = title;
     this._container.querySelector('.article-card__text').textContent = text;

@@ -15,7 +15,7 @@ export default class Auth {
 
   _redirectToMainPage() {
     if (this.isSavedPage()) {
-      window.location.href = '/main';
+      window.location.href = '../main';
     }
   }
 
@@ -28,7 +28,8 @@ export default class Auth {
   }
 
   isSavedPage() {
-    return window.location.pathname === '/' || window.location.pathname === '/savedArticles/';
+    return window.location.pathname === '/dist/savedArticles/index.html' || window.location.pathname === '/savedArtcles'
+      || window.location.pathname === '/';
   }
 
   getUserName() {
@@ -58,7 +59,6 @@ export default class Auth {
           if (this._dependencies.newsCardList) {
             this._dependencies.newsCardList.updateCardsViews();
           }
-
           if (this.isSavedPage()) {
             if (this._dependencies.articlesList) {
               this._dependencies.articlesList.updateArticles(

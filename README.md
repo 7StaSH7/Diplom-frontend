@@ -1,26 +1,42 @@
-# [Яндекс.Практикум: дипломная работа (вёрстка)](https://7stash7.github.io/Diplom-frontend/main/)
 
-`Версия 1.0.1`
+`Версия 1.1.0`
 
 Описание:
 ---
-Вёрстка дипломной работы.
+Собраны воедино api, вёрстка и JS.
+Ссылка для тестирования: https://news-stash.tk/
 
-* Выполнена вёрстка по макету.
-* JS не используется.
-* Для открытия/закрытия блоков в консоли необходимо ввести:
-    - `document.querySelector('.popup__popup-login').classList.toggle('popup_opened')` - попап входа;
-    - `document.querySelector('.popup__popup-registration').classList.toggle('popup_opened')` - попап регистрации;
-    - `document.querySelector('.popup__popup-success-registration').classList.toggle('popup_opened')` - попап успешной регистрации;
-    - `document.querySelector('.header__nav-box-logged-in').classList.toggle('header__nav-box_hidden')` и `document.querySelector('.header__nav-box-not-logged-in').classList.toggle('header__nav-box_hidden')` - поменять шапку на авторизированную и обратно
-    - `document.querySelector('.search-results__no-results').classList.toggle('search-results_hidden')` - блок с надписью "Ничего не найдено"
-    - `document.querySelector('.search-results__process').classList.toggle('search-results_hidden')` - блок с preloader'ом 
-    - `document.querySelector('.search-results__not-logged-in').classList.toggle('search-results_hidden')` - блок с результатами, если не авторизированный пользователь
-    - `document.querySelector('.search-results__logged-in').classList.toggle('search-results_hidden')` -  блок с результатами, если авторизированный пользователь
-* Внутренние ссылки настроены для работы от корня приложения, поэтому при переходе по ссылкам "Главная" и "Сохранённые статьи" на GH Pages переход будет некорректным. Эта проблема будет устранена после размещения приложения на хостинге.
-
-Страницы:
+Сборка и запуск:
 ---
-* Главная - https://7stash7.github.io/Diplom-frontend/main/
-* Сохранённые новости - https://7stash7.github.io/Diplom-frontend/savedArticles/
+- Склонируйте репозиторий:
 
+```
+git clone https://github.com/7StaSH7/Diplom-frontend.git
+```
+
+- Установите необходимые зависимости:
+
+```
+npm install
+```
+
+- Для запуска в режиме разработки выполните команду:
+
+```
+npm run dev
+```
+
+- Для получения итоговой сборки:
+
+```
+npm run build
+```
+
+- Для размещения на GitHub Pages:
+    * в файле `package.json` внесите необходимые настройки (информация о репозитории и домашней странице приложения).
+    * выполните команду:
+
+```
+npm run deploy
+```
+     
