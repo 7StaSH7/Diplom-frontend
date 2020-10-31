@@ -95,7 +95,7 @@ export default class ArticleCard extends BaseComponent {
     } = this._article;
     this._id = _id;
     this._newsUrl = link;
-    this._keyword = keyword;
+    this._keyword = keyword.toLowerCase();
 
     this._container = template.cloneNode(true).content;
 

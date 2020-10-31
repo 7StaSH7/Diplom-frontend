@@ -8,14 +8,13 @@ export default class Header extends BaseComponent {
     const {
       lightNotAuthTemplate,
       lightAuthTemplate,
-      darkNotAuthTemplate,
       darkAuthTemplate,
       authButtonSelector,
       theme,
       container,
     } = props;
 
-    this._notAuthTemplate = theme === 'light' ? lightNotAuthTemplate : darkNotAuthTemplate;
+    this._notAuthTemplate = theme === 'light' ? lightNotAuthTemplate : darkAuthTemplate;
     this._authTemplate = theme === 'light' ? lightAuthTemplate : darkAuthTemplate;
     this._authButtonSelector = authButtonSelector;
     this._container = container;

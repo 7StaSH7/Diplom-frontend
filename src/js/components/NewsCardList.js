@@ -54,8 +54,10 @@ export default class NewsCardList extends BaseComponent {
     this._showNewsCardList();
     this._renderTemplate(this._results);
     this._resultsContainer = this._container.querySelector(this._selectors.items);
-    this._showMoreButton = this._container.querySelector('.search-results__show-more');
-    this._setHandlers([{ element: this._showMoreButton, event: 'click', method: this._showMore }]);
+    if (!this._dependencies.auth.isSavedPage()) {
+      this._showMoreButton = this._container.querySelector('.search-results__show-more');
+      this._setHandlers([{ element: this._showMoreButton, event: 'click', method: this._showMore }]);
+    }
     this._showMore();
   }
 

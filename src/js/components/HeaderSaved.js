@@ -37,7 +37,8 @@ export default class HeaderSaved extends BaseComponent {
 
   _renderKeywords() {
     if (this._dependencies.articlesList) {
-      const tags = this._dependencies.articlesList.getKeywordsQuantity().map(([key]) => key);
+      const tags = this._dependencies.articlesList.getKeywordsQuantity()
+        .map(([key]) => key.toLowerCase());
 
       if (tags.length > 0) {
         this._renderSeparator('По ключевым словам: ');

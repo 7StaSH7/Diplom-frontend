@@ -10,7 +10,6 @@
   <title>Diplom</title>
   <link rel="icon" type="image/x-icon" href="../<%=require('@images/favicon.png').default%>">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.savedArticles.css %>" />
-  <!-- <link rel="stylesheet" type="text/css" href="./index.css"> -->
 </head>
 
 <body>
@@ -91,37 +90,6 @@
 
     <template id="saved-articles">
       <div class="saved-articles__items"></div>
-      <button class="button button__white search-results__show-more search-results__show-more_hidden">Показать
-        еще</button>
-    </template>
-
-    <template id="header-nav-not-logged-in-dark">
-      <div class="header__nav-box header__nav-box_dark">
-        <div class="content-container">
-          <h1 class="header__title header__title_dark">NewsExplorer</h1>
-          <input class="header__nav-switcher" id="header-nav-switcher" type="checkbox">
-          <label class="header__nav-switcher-label header__nav-switcher-label_open header__nav-switcher-label_dark"
-            for="header-nav-switcher"></label>
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item header__nav-item_dark">
-                <a class="header__nav-item-link" href="../main/index.html">Главная</a>
-              </li>
-              <li class="header__nav-item header__nav-item_dark header__nav-item_active">
-                <a class="header__nav-item-link" href="">Сохранённые статьи</a>
-              </li>
-              <li class="header__nav-item">
-                <button class="button button__transparent header__nav-item-button header__nav-item-button_dark">
-                  <span class="header__nav-item-name"></span>
-                  <i class="header__nav-item-button-icon header__nav-item-button-icon_dark"></i>
-                </button>
-              </li>
-            </ul>
-            <label class="header__nav-switcher-label header__nav-switcher-label_close"
-              for="header-nav-switcher"></label>
-          </nav>
-        </div>
-      </div>
     </template>
 
     <template id="article-card">
@@ -165,6 +133,9 @@
       <a href="" target="_blank" class="article-card__link"></a>
       <span class="article-card__tag">Природа</span>
       <span class="article-card__trash article-card__action"></span>
+      <div class="article-card__tip">
+        <p class="article-card__tip-message">Убрать из сохранённых</p>
+      </div>
     </template>
 
 

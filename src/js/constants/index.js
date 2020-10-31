@@ -2,7 +2,6 @@ const HEADER = {
   container: document.querySelector('.header-nav-container'),
   lightNotAuthTemplate: document.querySelector('#header-nav-not-logged-in'),
   lightAuthTemplate: document.querySelector('#header-nav-logged-in'),
-  darkNotAuthTemplate: document.querySelector('#header-nav-not-logged-in-dark'),
   darkAuthTemplate: document.querySelector('#header-nav-logged-in-dark'),
   authButtonSelector: '.header__nav-item-button',
 };
@@ -85,7 +84,7 @@ const MAIN_API_ROUTES = {
 };
 
 const NEWS_API = {
-  url: 'https://newsapi.org/v2/everything',
+  url: 'https://nomoreparties.co/news/v2/everything',
   sortBy: 'publishedAt',
   pageSize: 100,
   apiKey: '5c1f5cc59318410fb892e15b34bc2d4d',
