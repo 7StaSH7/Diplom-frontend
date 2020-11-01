@@ -12,6 +12,7 @@
   border-radius: 10px;
   opacity: 0;
   transition: opacity .15s ease-in;
+  z-index: 100;
 }
 
 .article-card__bookmark:hover ~ .article-card__tip {

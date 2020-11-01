@@ -10,141 +10,23 @@
   <title>Diplom</title>
   <link rel="icon" type="image/x-icon" href="../<%=require('@images/favicon.png').default%>">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.savedArticles.css %>" />
-  <!-- <link rel="stylesheet" type="text/css" href="./index.css"> -->
 </head>
 
 <body>
   <div class="root">
     <header class="header header__saved container">
-      <div class="header__nav-box header__nav-box_dark">
-        <div class="content-container">
-          <h1 class="header__title header__title_dark">NewsExplorer</h1>
-          <input class="header__nav-switcher" id="header-nav-switcher" type="checkbox">
-          <label class="header__nav-switcher-label header__nav-switcher-label_open header__nav-switcher-label_dark"
-            for="header-nav-switcher"></label>
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item header__nav-item_dark">
-                <a class="header__nav-item-link" href="../main/index.html">Главная</a>
-              </li>
-              <li class="header__nav-item header__nav-item_dark header__nav-item_active">
-                <a class="header__nav-item-link" href="">Сохранённые статьи</a>
-              </li>
-              <li class="header__nav-item">
-                <button class="button button__transparent header__nav-item-button header__nav-item-button_dark">
-                  Александр
-                  <i class="header__nav-item-button-icon header__nav-item-button-icon_dark"></i>
-                </button>
-              </li>
-            </ul>
-            <label class="header__nav-switcher-label header__nav-switcher-label_close"
-              for="header-nav-switcher"></label>
-          </nav>
-        </div>
-      </div>
+      <div class="header-nav-container"></div>
       <section class="content-container header-saved">
         <h2 class="header-saved__title">Сохранённые статьи</h2>
-        <p class="section-title header-saved__subtitle">Александр, у вас 5 сохранённых статей</p>
-        <p class="header-saved__details">
-          По ключевым словам: <span class="header-saved__detail-tag">Природа</span>, <span
-            class="header-saved__detail-tag">Тайга</span> и <span class="header-saved__detail-tag">2 другим</span>
-        </p>
+        <p class="section-title header-saved__subtitle"><span class="header-saved__name"></span>, у вас <span
+            class="header-saved__articles-count">0</span>
+          сохранённых статей</p>
+        <p class="header-saved__details"></p>
       </section>
     </header>
     <main class="main container">
-      <section class="content-container saved-articles">
-        <div class="saved-articles__items">
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_05.jpg').default %>"
-              alt="Национальное достояние – парки" />
-            <span class="article-card__tag">Природа</span>
-            <span class="article-card__trash"></span>
-            <div class="article-card__tip">
-              <p class="article-card__tip-message">Убрать из сохранённых</p>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Национальное достояние – парки</h3>
-              <p class="article-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_06.jpg').default %>"
-              alt="Национальное достояние – парки" />
-            <span class="article-card__tag">Природа</span>
-            <span class="article-card__trash"></span>
-            <div class="article-card__tip">
-              <p class="article-card__tip-message">Убрать из сохранённых</p>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Национальное достояние – парки</h3>
-              <p class="article-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_01.jpg').default %>"
-              alt="Национальное достояние – парки" />
-            <span class="article-card__tag">Природа</span>
-            <span class="article-card__trash"></span>
-            <div class="article-card__tip">
-              <p class="article-card__tip-message">Убрать из сохранённых</p>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Национальное достояние – парки</h3>
-              <p class="article-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_05.jpg').default %>"
-              alt="Национальное достояние – парки" />
-            <span class="article-card__tag">Природа</span>
-            <span class="article-card__trash"></span>
-            <div class="article-card__tip">
-              <p class="article-card__tip-message">Убрать из сохранённых</p>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Национальное достояние – парки</h3>
-              <p class="article-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-          <article class="article-card">
-            <img class="article-card__img" src="../<%= require('@images/image_05.jpg').default %>"
-              alt="Национальное достояние – парки" />
-            <span class="article-card__tag">Природа</span>
-            <span class="article-card__trash"></span>
-            <div class="article-card__tip">
-              <p class="article-card__tip-message">Убрать из сохранённых</p>
-            </div>
-            <div class="article-card__content">
-              <h5 class="article-card__date">2 августа, 2019</h5>
-              <h3 class="article-card__title">Национальное достояние – парки</h3>
-              <p class="article-card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных
-                парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-            </div>
-            <h4 class="article-card__source">Лента.ру</h4>
-          </article>
-        </div>
+      <section class="content-container saved-articles news-cards-list search-results_hidden">
+        <div class="saved-articles__items"></div>
       </section>
     </main>
     <footer class="container content-container footer">
@@ -152,7 +34,7 @@
       <nav class="footer__nav">
         <ul class="footer__nav-list">
           <li class="footer__nav-list-item">
-            <a class="footer__nav-list-item-link" href="/">Главная</a></li>
+            <a class="footer__nav-list-item-link" href="../main/index.html">Главная</a></li>
           <li class="footer__nav-list-item">
             <a class="footer__nav-list-item-link" href="https://praktikum.yandex.ru/"
               target="_blank">Яндекс.Практикум</a>
@@ -172,6 +54,91 @@
         </li>
       </ul>
     </footer>
+
+    <template id="header-saved-detail-tag">
+      <span class="header-saved__detail-tag"></span>
+    </template>
+
+    <template id="header-nav-logged-in-dark">
+      <div class="header__nav-box header__nav-box_dark">
+        <div class="content-container">
+          <h1 class="header__title header__title_dark">NewsExplorer</h1>
+          <input class="header__nav-switcher" id="header-nav-switcher" type="checkbox">
+          <label class="header__nav-switcher-label header__nav-switcher-label_open header__nav-switcher-label_dark"
+            for="header-nav-switcher"></label>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item header__nav-item_dark">
+                <a class="header__nav-item-link" href="../main/index.html">Главная</a>
+              </li>
+              <li class="header__nav-item header__nav-item_dark header__nav-item_active">
+                <a class="header__nav-item-link" href="">Сохранённые статьи</a>
+              </li>
+              <li class="header__nav-item">
+                <button class="button button__transparent header__nav-item-button header__nav-item-button_dark">
+                  <span class="header__nav-item-name"></span>
+                  <i class="header__nav-item-button-icon header__nav-item-button-icon_dark"></i>
+                </button>
+              </li>
+            </ul>
+            <label class="header__nav-switcher-label header__nav-switcher-label_close"
+              for="header-nav-switcher"></label>
+          </nav>
+        </div>
+      </div>
+    </template>
+
+    <template id="saved-articles">
+      <div class="saved-articles__items"></div>
+    </template>
+
+    <template id="article-card">
+      <article class="article-card">
+        <img class="article-card__img" src="" alt="" />
+        <div class="article-card__icon-container"></div>
+        <div class="article-card__content">
+          <h5 class="article-card__date"></h5>
+          <h3 class="article-card__title"></h3>
+          <p class="article-card__text"></p>
+        </div>
+        <h4 class="article-card__source"></h4>
+      </article>
+    </template>
+
+    <template id="article-card-base-action">
+      <a href="" target="_blank" class="article-card__link"></a>
+      <div class="article-card__bookmark">
+        <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked article-card__action"></div>
+      </div>
+      <div class="article-card__tip">
+        <p class="article-card__tip-message">Войдите, чтобы сохранять статьи</p>
+      </div>
+    </template>
+
+    <template id="article-card-like-action">
+      <a href="" target="_blank" class="article-card__link"></a>
+      <div class="article-card__bookmark">
+        <div class="article-card__bookmark-icon article-card__bookmark-icon_unmarked article-card__action"></div>
+      </div>
+    </template>
+
+    <template id="article-card-unlike-action">
+      <a href="" target="_blank" class="article-card__link"></a>
+      <div class="article-card__bookmark">
+        <div class="article-card__bookmark-icon article-card__bookmark-icon_marked article-card__action"></div>
+      </div>
+    </template>
+
+    <template id="article-card-saved-action">
+      <a href="" target="_blank" class="article-card__link"></a>
+      <span class="article-card__tag">Природа</span>
+      <span class="article-card__trash article-card__action"></span>
+      <div class="article-card__tip">
+        <p class="article-card__tip-message">Убрать из сохранённых</p>
+      </div>
+    </template>
+
+
 
   </div>
 

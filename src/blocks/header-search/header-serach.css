@@ -5,6 +5,7 @@
 @import url('./__input/header-search__input.css');
 @import url('./__button/header-search__button.css');
 @import url('./__input-error/header-search__input-error.css');
+@import url('./__server-error/header-search__server-error.css');
 
 
 .header-search {

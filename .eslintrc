@@ -1,6 +1,32 @@
 {
   "extends": "airbnb-base",
+  "globals": {
+    "window": true,
+    "document": true,
+    "fetch": true
+  },
   "rules": {
-    "no-underscore-dangle": ["error", { "allow": ["_id"] }]
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allowAfterThis": true,
+        "allow": [
+          "_id",
+          "_closeForm"
+        ]
+      }
+    ],
+    "class-methods-use-this": [
+      "error",
+      {
+        "exceptMethods": [
+          "_validateInputElement",
+          "_popupLinkClick",
+          "_submitForm",
+          "_getCardDate",
+          "isSavedPage"
+        ]
+      }
+    ]
   }
 }

@@ -8,13 +8,12 @@
 @import url('./__form-input-title/popup__form-input-title.css');
 @import url('./__form-input/popup__form-input.css');
 @import url('./__form-error/popup__form-error.css');
-@import url('./__form-error-from-server/popup__form-error-from-server.css');
 @import url('./__form-button/popup__form-button.css');
 @import url('./__footer/popup__footer.css');
 @import url('./__link/popup__link.css');
 @import url('./__login/popup__login.css');
 @import url('./__registration/popup__registration.css');
-@import url('./__success-registration/popup__success-registration.css');
+@import url('./__successful-registration/popup__successful-registration.css');
 
 
 .popup {

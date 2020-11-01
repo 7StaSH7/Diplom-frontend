@@ -6,10 +6,12 @@
 @import url('./__tag/article-card__tag.css');
 @import url('./__trash/article-card__trash.css');
 @import url('./__img/article-card__img.css');
+@import url('./__link/article-card__link.css');
 @import url('./__bookmark/article-card__bookmark.css');
 @import url('./__bookmark-icon/article-card__bookmark-icon.css');
 @import url('./__tip/article-card__tip.css');
 @import url('./__tip-message/article-card__tip-message.css');
+@import url('./__icon-container/article-card__icon-container.css');
 
 .article-card {
   position: relative;
